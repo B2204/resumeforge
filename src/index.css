@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color-scheme: dark light;
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+}
+
+/* ── Custom Scrollbars ──────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 6px; height: 6px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: #cbd5e1; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+.dark ::-webkit-scrollbar-thumb       { background: #334155; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* ── Glassmorphism ──────────────────────────────────────────────── */
+.bg-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.bg-glass-dark {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* ── Extra Tailwind-style colour tokens ────────────────────────── */
+.text-slate-750   { color: #334155; }
+.dark .text-slate-750 { color: #cbd5e1; }
+.text-slate-650   { color: #475569; }
+.dark .text-slate-650 { color: #94a3b8; }
+.text-slate-450   { color: #64748b; }
+.dark .text-slate-450 { color: #64748b; }
+
+.bg-slate-850    { background-color: #f1f5f9; }
+.dark .bg-slate-850 { background-color: #1e293b; }
+.border-slate-850 { border-color: #e2e8f0; }
+.dark .border-slate-850 { border-color: #1e293b; }
+.border-slate-800\/80 { border-color: rgba(226,232,240,0.8); }
+.dark .border-slate-800\/80 { border-color: rgba(30,41,59,0.8); }
+
+/* ── Font display helper ─────────────────────────────────────────── */
+.font-display { font-family: 'Outfit', 'Inter', sans-serif; }
+
+/* ================================================================
+   BUILDER FORM — PEACH THEME INPUTS & SECTION CARDS
+   ================================================================ */
+
+/* Every input / textarea / select inside the builder form panel */
+.builder-field {
+  background-color: #fff2ea;
+  border: 1.5px solid #f6c0a0;
+  color: #3b2214;
+  font-weight: 700;
+  font-size: 0.8rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  display: block;
+}
+.builder-field::placeholder { color: #c4956a; font-weight: 500; }
+.builder-field:focus {
+  border-color: #e8824e;
+  box-shadow: 0 0 0 2.5px rgba(232,130,78,0.22);
+}
+.builder-field:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background-color: #fce8da;
+}
+
+/* Dark mode builder inputs */
+.dark .builder-field {
+  background-color: #2a1a0e;
+  border-color: #7a4030;
+  color: #fde8d8;
+}
+.dark .builder-field::placeholder { color: #a06040; }
+.dark .builder-field:focus { border-color: #e8824e; box-shadow: 0 0 0 2.5px rgba(232,130,78,0.18); }
+.dark .builder-field:disabled { background-color: #1e1008; }
+
+/* Section accordion card backgrounds */
+.builder-section {
+  background-color: #fff7f2;
+  border: 1.5px solid #f6d5c2;
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+.dark .builder-section {
+  background-color: #1a100a;
+  border-color: #3b2214;
+}
+
+/* ================================================================
+   @media print — High-Fidelity Resume Print Styles
+   ================================================================ */
+@media print {
+  html, body {
+    background: #ffffff !important;
+    color: #1e293b !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  header, aside, footer, form, button, select, input, textarea,
+  .zoom-panel {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  #root {
+    display: block !important;
+    border: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  #printable-resume-card {
+    visibility: visible !important;
+    display: flex !important;
+    flex-direction: row !important;
+    position: static !important;
+    transform: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+  }
+
+  .print-wrapper, .print-scale-container {
+    position: static !important;
+    transform: none !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: unset !important;
+    min-width: unset !important;
+  }
+
+  #printable-resume-card.flex-col { flex-direction: column !important; }
+  #printable-resume-card * { visibility: visible !important; }
+
+  #printable-resume-card > div:first-child {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  #printable-resume-card .space-y-3\.5 > div,
+  #printable-resume-card .space-y-1\.5 > div,
+  #printable-resume-card .space-y-4 > div,
+  #printable-resume-card .space-y-5 > div,
+  #printable-resume-card .grid > div {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  #printable-resume-card section,
+  #printable-resume-card [class*="w-full"] {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    orphans: 3;
+    widows: 3;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+}
