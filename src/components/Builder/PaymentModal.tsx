@@ -105,7 +105,7 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, onS
                   <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-indigo-500/20 mb-4">
                     RF
                   </div>
-                  <h3 className="font-display font-bold text-lg mb-1">Resume'9 Pro</h3>
+                  <h3 className="font-display font-bold text-lg mb-1">MyResume Assistant Pro</h3>
                   <p className="text-xs text-slate-400">One-time Resume Export</p>
                   <div className="mt-4 flex items-center justify-center gap-3">
                     <span className="text-xl font-bold tracking-tight text-slate-400 line-through decoration-rose-500/50">₹99.00</span>

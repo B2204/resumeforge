@@ -21,12 +21,11 @@ for (const file of filesToUpdate) {
     let content = fs.readFileSync(fullPath, 'utf8');
     
     // Replace exact matches in order of specificity
-    content = content.replace(/ResumeForge_AI_Resume/g, "Resume9_Resume");
-    content = content.replace(/ResumeForge AI/g, "Resume'9");
-    content = content.replace(/ResumeForge/g, "Resume'9");
-    content = content.replace(/resumeforge\.ai/g, "resume9.ai");
-    content = content.replace(/resumeforge\.com/g, "resume9.com");
-    content = content.replace(/resumeforge_payments/g, "resume9_payments");
+    content = content.replace(/Resume9_Resume/g, "ResumeAssistant_Resume");
+    content = content.replace(/Resume'9/g, "Resume Assistant");
+    content = content.replace(/resume9\.ai/g, "resumeassistant.ai");
+    content = content.replace(/resume9\.com/g, "resumeassistant.com");
+    content = content.replace(/resume9_payments/g, "resumeassistant_payments");
     
     fs.writeFileSync(fullPath, content, 'utf8');
     console.log(`Updated ${file}`);

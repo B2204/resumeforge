@@ -48,7 +48,7 @@ export const PaymentManagement: React.FC = () => {
     const a = document.createElement('a');
     a.setAttribute('hidden', '');
     a.setAttribute('href', url);
-    a.setAttribute('download', 'resume9_payments.csv');
+    a.setAttribute('download', 'myresume_payments.csv');
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

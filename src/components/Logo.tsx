@@ -52,7 +52,7 @@ export const Logo = ({ className = "h-10 w-10" }: { className?: string }) => (
 export const LogoWordmark = ({ className = "" }: { className?: string }) => (
   <div className={`flex flex-col justify-center ${className}`}>
     <span className="font-sans font-extrabold text-[1.1rem] tracking-tight text-slate-900 dark:text-white leading-none">
-      Resume<span className="text-violet-600">Forge</span> <span className="font-medium text-slate-500 dark:text-slate-400">AI</span>
+      MyResume<span className="text-violet-600">Assistant</span>
     </span>
     <span className="text-[0.6rem] font-bold text-blue-500 tracking-[0.15em] uppercase mt-[2px]">
       ATS Resume Intelligence
