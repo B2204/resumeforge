@@ -143,6 +143,12 @@ export const Layout: React.FC<LayoutProps> = ({
             >
               Home
             </button>
+            <button 
+              onClick={() => setActiveView('blog')} 
+              className={`px-6 py-2.5 rounded-xl text-[15px] font-bold transition-all duration-300 ${activeView === 'blog' || activeView === 'post' ? (theme === 'dark' ? 'bg-[#1e293b] text-indigo-400 shadow-sm' : 'bg-white text-indigo-600 shadow-sm') : (theme === 'dark' ? 'text-slate-400 hover:text-white hover:bg-slate-800/50' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50')}`}
+            >
+              Blog
+            </button>
             {user && (
               <>
                 <button 
@@ -341,6 +347,7 @@ export const Layout: React.FC<LayoutProps> = ({
                 <li><button onClick={() => openAuthModal('signup')} className="hover:text-indigo-500 text-left transition-colors">AI Bullet Rewrite</button></li>
                 <li><button onClick={() => openAuthModal('signup')} className="hover:text-indigo-500 text-left transition-colors">Job Keyword Matching</button></li>
                 <li><button onClick={() => openAuthModal('signup')} className="hover:text-indigo-500 text-left transition-colors">Cover Letter Generator</button></li>
+                <li><button onClick={() => { setActiveView('blog'); window.scrollTo(0,0); }} className="hover:text-indigo-500 text-left transition-colors text-indigo-600">Career Blog</button></li>
               </ul>
             </div>
             <div>

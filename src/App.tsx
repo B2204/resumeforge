@@ -10,11 +10,14 @@ import { CoverLetterGen } from './components/Dashboard/CoverLetterGen';
 import { AdminDashboard } from './components/Admin/AdminDashboard';
 import { calculateATSScore } from './data/mockAI';
 import { TemplateGallery } from './components/TemplateGallery';
+import { BlogIndex } from './components/Blog/BlogIndex';
+import { BlogPost } from './components/Blog/BlogPost';
 
 function App() {
   const { user, activeResumeId, resumes, setActiveResumeId } = useApp();
   const [activeView, setActiveView] = useState<string>('landing');
   const [authModalMode, setAuthModalMode] = useState<'login' | 'signup' | null>(null);
+  const [selectedPostId, setSelectedPostId] = useState<string>('');
 
   // If a user logs in, automatically take them from landing to dashboard
   useEffect(() => {
@@ -58,6 +61,10 @@ function App() {
         return <UserDashboard setActiveView={setActiveView} />;
       case 'gallery':
         return <TemplateGallery setActiveView={setActiveView} openAuthModal={setAuthModalMode} />;
+      case 'blog':
+        return <BlogIndex onOpenPost={(id) => { setSelectedPostId(id); setActiveView('post'); }} />;
+      case 'post':
+        return <BlogPost postId={selectedPostId} onBack={() => setActiveView('blog')} onCTA={() => { setActiveView('landing'); setAuthModalMode('login'); }} />;
       default:
         return (
           <LandingPage 
