@@ -356,7 +356,7 @@ export const Layout: React.FC<LayoutProps> = ({
                 <li><button onClick={() => setLegalModalContent({ title: 'About Us', content: "We are MyResume Assistant, a platform dedicated to making professional resume building accessible and optimized using smart analysis algorithms." })} className="hover:text-indigo-500 text-left transition-colors">About Us</button></li>
                 <li><button onClick={() => setLegalModalContent({ title: 'Privacy Policy', content: 'Your privacy is important to us. We do not sell your personal data. All your resume data is securely stored locally and managed by you.' })} className="hover:text-indigo-500 text-left transition-colors">Privacy Policy</button></li>
                 <li><button onClick={() => setLegalModalContent({ title: 'Terms of Service', content: 'By using this service, you agree to our standard terms. The platform is free to use with optional premium features. Please behave responsibly.' })} className="hover:text-indigo-500 text-left transition-colors">Terms of Service</button></li>
-                <li><button onClick={() => setLegalModalContent({ title: 'Support Desk', content: 'Need help? Contact our support team at support@myresumeassistant.com. We usually respond within 24 hours to all inquiries.' })} className="hover:text-indigo-500 text-left transition-colors">Support Desk</button></li>
+                <li><button onClick={() => setLegalModalContent({ title: 'Contact', content: 'Need assistance, have feature requests, or business inquiries? Please reach out to the developer, Barathrajan S, directly at barathrajanselvaraju22@gmail.com.' })} className="hover:text-indigo-500 text-left transition-colors">Contact</button></li>
               </ul>
             </div>
             <div>
