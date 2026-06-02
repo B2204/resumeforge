@@ -107,7 +107,7 @@ export const ResumeBuilder: React.FC<ResumeBuilderProps> = ({ setActiveView }) =
   };
 
   return (
-    <div className="flex flex-col h-[calc(100vh-4rem)]">
+    <div className="flex flex-col h-[calc(100vh-4rem)] print:h-auto print:block">
       
       {/* 1. TOP BUILDER BAR ACTIONS */}
       <div className={`print:hidden px-4 sm:px-6 py-3 border-b flex flex-col md:flex-row items-center justify-between gap-3 transition-colors duration-300 ${theme === 'dark' ? 'bg-[#0f172a] border-slate-800' : 'bg-white border-slate-200'}`}>
@@ -177,7 +177,7 @@ export const ResumeBuilder: React.FC<ResumeBuilderProps> = ({ setActiveView }) =
       </div>
 
       {/* 2. SPLIT SCREEN WORKSPACE LAYOUT */}
-      <div className="flex flex-grow overflow-hidden">
+      <div className="flex flex-grow overflow-hidden print:overflow-visible print:block">
         
         {/* Left Column - Form controls (5/12) */}
         <div className={`w-full lg:w-5/12 p-4 sm:p-6 border-r flex flex-col overflow-y-auto print:hidden transition-colors duration-300 ${theme === 'dark' ? 'bg-[#0f172a] border-slate-800' : 'bg-white border-slate-200'}`}>
@@ -191,7 +191,7 @@ export const ResumeBuilder: React.FC<ResumeBuilderProps> = ({ setActiveView }) =
         <div className={`hidden lg:flex lg:w-7/12 overflow-auto p-8 justify-center select-none relative scrollbar-thin print:flex print:w-full print:p-0 print:m-0 print:absolute print:inset-0 print:overflow-visible ${theme === 'dark' ? 'bg-[#111827]/70' : 'bg-slate-200/50'}`}>
           
           {/* Virtual Floating Paper Wrap */}
-          <div className="w-full min-h-full flex items-start justify-center pb-24 relative" onContextMenu={(e) => { if(user?.role !== 'admin') e.preventDefault(); }}>
+          <div className="w-full min-h-full flex items-start justify-center pb-24 relative print:pb-0 print:min-h-0" onContextMenu={(e) => { if(user?.role !== 'admin') e.preventDefault(); }}>
             <TemplatePreview 
               resume={activeResume}
               zoomScale={zoomScale}

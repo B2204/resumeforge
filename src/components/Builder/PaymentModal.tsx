@@ -83,12 +83,26 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, onS
               </div>
               
               {activeResume ? (
-                <div className="w-full flex items-start justify-center pt-2">
-                  <div className="shadow-2xl rounded-sm overflow-hidden border border-slate-700/20 bg-white">
+                <div className="w-full flex items-start justify-center pt-2 relative">
+                  <div className="shadow-2xl rounded-sm overflow-hidden border border-slate-700/20 bg-white relative">
                     <TemplatePreview 
                       resume={activeResume}
                       zoomScale={0.52}
                     />
+                    
+                    {/* Watermark overlay inside the Payment Modal preview */}
+                    {user?.role !== 'admin' && (
+                      <div className="absolute inset-0 pointer-events-none flex flex-wrap items-center justify-center overflow-hidden opacity-[0.06] z-50">
+                        {Array.from({ length: 15 }).map((_, i) => (
+                          <span 
+                            key={i} 
+                            className="text-xl font-black uppercase tracking-widest text-slate-900 mx-4 my-6 -rotate-45 select-none"
+                          >
+                            MyResume Assistant
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               ) : (
