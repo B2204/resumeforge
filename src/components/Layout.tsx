@@ -119,12 +119,14 @@ export const Layout: React.FC<LayoutProps> = ({
       <header className={`sticky top-0 z-40 w-full backdrop-blur-md border-b transition-colors duration-300 ${theme === 'dark' ? 'bg-[#0f172a]/80 border-slate-800' : 'bg-white/80 border-slate-200'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <button 
-              onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/50"
-            >
-              <Menu size={24} />
-            </button>
+            {user && activeView !== 'landing' && (
+              <button 
+                onClick={() => setSidebarOpen(!sidebarOpen)}
+                className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/50"
+              >
+                <Menu size={24} />
+              </button>
+            )}
             <div 
               onClick={() => setActiveView('landing')} 
               className="flex items-center gap-3 cursor-pointer select-none group"
