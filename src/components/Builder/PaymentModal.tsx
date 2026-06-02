@@ -107,7 +107,10 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, onS
                   </div>
                   <h3 className="font-display font-bold text-lg mb-1">ResumeForge AI Pro</h3>
                   <p className="text-xs text-slate-400">One-time Resume Export</p>
-                  <div className="mt-4 text-3xl font-black tracking-tight">₹10.00</div>
+                  <div className="mt-4 flex items-center justify-center gap-3">
+                    <span className="text-xl font-bold tracking-tight text-slate-400 line-through decoration-rose-500/50">₹99.00</span>
+                    <span className="text-3xl font-black tracking-tight text-emerald-500">Free</span>
+                  </div>
                 </div>
 
                 <form onSubmit={handlePay} className="p-6 flex flex-col gap-5">
@@ -125,7 +128,7 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, onS
                       <span className="font-bold text-lg border p-1 rounded">GPay</span>
                     </div>
                     <p className="text-xs text-slate-400 mt-2 leading-relaxed">
-                      You will be redirected to the secure Razorpay checkout to complete your payment using Cards, UPI, or Net Banking.
+                      Enjoy the premium export features absolutely free during our promotional period! No payment details required.
                     </p>
                   </div>
 
@@ -137,10 +140,10 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, onS
                     {isProcessing ? (
                       <>
                         <Loader2 size={18} className="animate-spin" />
-                        Initializing Razorpay...
+                        Generating Secure PDF...
                       </>
                     ) : (
-                      <>Proceed to Pay ₹10.00</>
+                      <>Download for Free (₹0.00)</>
                     )}
                   </button>
 
