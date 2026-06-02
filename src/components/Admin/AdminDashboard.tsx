@@ -47,7 +47,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ setActiveView })
             </div>
             <div>
               <h2 className="font-black text-sm text-slate-900 dark:text-white uppercase tracking-wider">Admin Portal</h2>
-              <p className="text-[10px] text-slate-500 font-bold">ResumeForge AI</p>
+              <p className="text-[10px] text-slate-500 font-bold">Resume'9</p>
             </div>
           </div>
         </div>

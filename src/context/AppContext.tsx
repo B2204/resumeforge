@@ -11,7 +11,7 @@ export const DEFAULT_PRELOADED_RESUME: Resume = {
   personalInfo: {
     name: 'Alex Morgan',
     title: 'Senior Full Stack Software Engineer',
-    email: 'alex.morgan@resumeforge.ai',
+    email: 'alex.morgan@resume9.ai',
     phone: '+1 (555) 234-5678',
     location: 'San Francisco, CA',
     website: 'https://alexmorgan.dev',

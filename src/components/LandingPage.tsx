@@ -114,7 +114,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ setActiveView, openAut
                     <div className="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center">
                        <FileText size={14} className="text-white" />
                     </div>
-                    <span className="font-bold text-slate-800 text-sm tracking-tight">ResumeForge</span>
+                    <span className="font-bold text-slate-800 text-sm tracking-tight">Resume'9</span>
                   </div>
                   
                   <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider px-2 mb-2 mt-2">Sections</div>

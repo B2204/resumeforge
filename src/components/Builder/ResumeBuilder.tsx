@@ -65,7 +65,7 @@ export const ResumeBuilder: React.FC<ResumeBuilderProps> = ({ setActiveView }) =
 
   const handlePrint = () => {
     const oldTitle = document.title;
-    document.title = activeResume.title || 'ResumeForge_AI_Resume';
+    document.title = activeResume.title || 'Resume9_Resume';
     window.print();
     document.title = oldTitle;
     

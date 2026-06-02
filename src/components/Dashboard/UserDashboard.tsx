@@ -74,7 +74,7 @@ export const UserDashboard: React.FC<UserDashboardProps> = ({ setActiveView }) =
               alert("Resume backup loaded successfully!");
             }, 10);
           } catch (err) {
-            alert("Invalid ResumeForge JSON backup file structure.");
+            alert("Invalid Resume'9 JSON backup file structure.");
             setIsParsingText(false);
             setParsingProgress('');
           }

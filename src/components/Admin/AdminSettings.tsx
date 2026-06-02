@@ -51,11 +51,11 @@ export const AdminSettings: React.FC = () => {
             <div className="flex flex-col gap-4">
               <div>
                 <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Platform Name</label>
-                <input type="text" defaultValue="ResumeForge AI" className={`w-full p-3 rounded-xl border text-sm font-medium ${theme === 'dark' ? 'bg-[#0f172a] border-slate-700' : 'bg-white border-slate-200'}`} />
+                <input type="text" defaultValue="Resume'9" className={`w-full p-3 rounded-xl border text-sm font-medium ${theme === 'dark' ? 'bg-[#0f172a] border-slate-700' : 'bg-white border-slate-200'}`} />
               </div>
               <div>
                 <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Support Email</label>
-                <input type="email" defaultValue="support@resumeforge.ai" className={`w-full p-3 rounded-xl border text-sm font-medium ${theme === 'dark' ? 'bg-[#0f172a] border-slate-700' : 'bg-white border-slate-200'}`} />
+                <input type="email" defaultValue="support@resume9.ai" className={`w-full p-3 rounded-xl border text-sm font-medium ${theme === 'dark' ? 'bg-[#0f172a] border-slate-700' : 'bg-white border-slate-200'}`} />
               </div>
               <div>
                 <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Maintenance Mode</label>

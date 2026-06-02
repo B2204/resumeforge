@@ -346,10 +346,10 @@ export const Layout: React.FC<LayoutProps> = ({
             <div>
               <h5 className="font-black text-sm text-slate-900 dark:text-slate-200 mb-4 uppercase tracking-wider">Company</h5>
               <ul className="flex flex-col gap-2 text-xs font-medium">
-                <li><button onClick={() => setLegalModalContent({ title: 'About Us', content: 'We are ResumeForge AI, a platform dedicated to making professional resume building accessible and optimized using smart analysis algorithms.' })} className="hover:text-indigo-500 text-left transition-colors">About Us</button></li>
+                <li><button onClick={() => setLegalModalContent({ title: 'About Us', content: "We are Resume'9, a platform dedicated to making professional resume building accessible and optimized using smart analysis algorithms." })} className="hover:text-indigo-500 text-left transition-colors">About Us</button></li>
                 <li><button onClick={() => setLegalModalContent({ title: 'Privacy Policy', content: 'Your privacy is important to us. We do not sell your personal data. All your resume data is securely stored locally and managed by you.' })} className="hover:text-indigo-500 text-left transition-colors">Privacy Policy</button></li>
                 <li><button onClick={() => setLegalModalContent({ title: 'Terms of Service', content: 'By using this service, you agree to our standard terms. The platform is free to use with optional premium features. Please behave responsibly.' })} className="hover:text-indigo-500 text-left transition-colors">Terms of Service</button></li>
-                <li><button onClick={() => setLegalModalContent({ title: 'Support Desk', content: 'Need help? Contact our support team at support@resumeforge.com. We usually respond within 24 hours to all inquiries.' })} className="hover:text-indigo-500 text-left transition-colors">Support Desk</button></li>
+                <li><button onClick={() => setLegalModalContent({ title: 'Support Desk', content: 'Need help? Contact our support team at support@resume9.com. We usually respond within 24 hours to all inquiries.' })} className="hover:text-indigo-500 text-left transition-colors">Support Desk</button></li>
               </ul>
             </div>
             <div>
@@ -362,7 +362,7 @@ export const Layout: React.FC<LayoutProps> = ({
             </div>
           </div>
           <div className="max-w-7xl mx-auto border-t border-slate-900/60 mt-10 pt-6 flex flex-col md:flex-row justify-between text-xs">
-            <p>&copy; {new Date().getFullYear()} ResumeForge AI. Engineered by Antigravity at DeepMind. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Resume'9. Engineered by Antigravity at DeepMind. All rights reserved.</p>
             <p className="flex gap-4 mt-4 md:mt-0">
               <span className="hover:text-indigo-400 cursor-pointer">Security</span>
               <span className="hover:text-indigo-400 cursor-pointer">GDPR</span>

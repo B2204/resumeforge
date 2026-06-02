@@ -312,7 +312,7 @@ export const MOCK_INTERVIEW_REGISTRY: Record<string, Array<{ id: string; type: '
       type: "hr",
       question: "Why do you want to join our engineering team and how do you keep your technical skills current?",
       points: ["Alignment with modern stack", "Passion for solving scale problems", "Technical blogs, open source, and building side projects"],
-      answer: "I want to join your team because of your high technical standards and focus on building high-performance products. I thrive in responsive technical environments. I keep my skills sharp by reading tech newsletters (e.g., TLDR, Hacker News), participating in open-source challenges, and continuously building interactive side projects like ResumeForge AI to experiment with advanced state management and styling layers."
+      answer: "I want to join your team because of your high technical standards and focus on building high-performance products. I thrive in responsive technical environments. I keep my skills sharp by reading tech newsletters (e.g., TLDR, Hacker News), participating in open-source challenges, and continuously building interactive side projects like Resume'9 to experiment with advanced state management and styling layers."
     }
   ],
   "frontend_engineer": [
