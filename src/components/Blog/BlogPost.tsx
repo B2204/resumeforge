@@ -10,7 +10,7 @@ interface BlogPostProps {
 
 // Very simple custom markdown parser for basic formatting
 const parseContent = (content: string) => {
-  const lines = content.split('\\n');
+  const lines = content.split('\n');
   return lines.map((line, idx) => {
     const trimmed = line.trim();
     if (!trimmed) return <br key={idx} />;
